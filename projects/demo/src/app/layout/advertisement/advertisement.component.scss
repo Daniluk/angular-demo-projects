@@ -1,0 +1,21 @@
+:host {
+    border: 0px solid;
+    position: absolute;
+    top: 64px;
+    right: 0%;
+    height: 100%;
+    max-height: 89vh;
+    width: 100%;
+    max-width: 340px;
+
+    img {
+        max-width: 200px;
+        width: 80%;
+        height: auto;
+        margin: auto;
+    }
+
+    .mat-card {
+        box-shadow: none;
+    }
+}

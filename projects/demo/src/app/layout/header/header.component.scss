@@ -1,0 +1,15 @@
+:host {
+    border: 0px solid;
+
+    .search-and-change-lang {
+        display: flex;
+        border: 0px solid;
+        position: fixed;
+        width: 4rem;
+        left: calc(100vw - 6rem);
+        top: -0.5rem;
+        align-items: center;
+        justify-content: space-around;
+    }
+  
+}

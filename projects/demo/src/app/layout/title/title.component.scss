@@ -1,0 +1,16 @@
+:host {
+    mat-list-item {
+        color: #FFF;
+        text-transform: capitalize;
+        font-size: 2rem;
+    }
+
+    .mat-list-base {
+        padding-top: 0px;
+    }
+
+    .logo {
+        height: 40px;
+        display: flex;
+    }    
+}

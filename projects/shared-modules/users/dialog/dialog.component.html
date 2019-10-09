@@ -1,0 +1,12 @@
+<mat-dialog-content >
+  <mat-form-field color="accent">
+    <input name="email" placeholder="Enter e-mail" type="email" matInput [(ngModel)]="data.user.email" cdkFocusInitial>
+  </mat-form-field>
+  <mat-form-field color="accent">
+    <input type="password" matInput placeholder="Enter password" [(ngModel)]="data.user.password" />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data.user" [disabled]="isInvalid(data.user)">Save</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</mat-dialog-actions>
