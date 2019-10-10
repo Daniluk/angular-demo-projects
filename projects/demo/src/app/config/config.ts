@@ -6,7 +6,11 @@ export const CONFIG = {
     },
 
     TYPE: {
-        CUSTOMERS : {
+        TEXT_EDITOR: {
+            NAME: 'text-editor',
+            LINK: 'text-editor'
+        },
+        CUSTOMERS: {
             NAME: 'customers',
             LINK: 'customers'
         }

@@ -1,0 +1,7 @@
+<mat-form-field>
+  <mat-select #langSelect class="text_uppercase" [(value)]="selected" (selectionChange)="setLocale($event.value)">
+    <mat-option class="text_uppercase" *ngFor="let lang of translate.getLangs()" [value]="lang">
+      {{ lang }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

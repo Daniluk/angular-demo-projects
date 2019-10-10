@@ -7,6 +7,7 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TitleComponent } from './title/title.component';
+import { ChangeLangComponent } from './change-lang/change-lang.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { TitleComponent } from './title/title.component';
   declarations: [
     MainLayoutComponent,
     HeaderComponent,
+    ChangeLangComponent,
     SidebarComponent,
     TitleComponent,
     AdvertisementComponent,

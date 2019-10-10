@@ -7,6 +7,7 @@ import { LayoutModule } from './layout/layout.module';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { VSTranslateModule } from 'projects/shared-modules/translate/vs-translate.module';
 
 // List of providers
 const providers = [];
@@ -21,6 +22,7 @@ const providers = [];
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    VSTranslateModule,
     LayoutModule,
   ],
   providers: [
