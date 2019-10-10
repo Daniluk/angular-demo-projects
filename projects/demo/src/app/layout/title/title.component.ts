@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { CONFIG } from '../../config/config';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-title',
@@ -9,10 +8,11 @@ import { CONFIG } from '../../config/config';
 })
 export class TitleComponent implements OnInit {
 
-  title = CONFIG.NAME_PROJECT;
+  title = 'demo';
 
   constructor(
     private router: Router,
+    private activatedRoute: ActivatedRoute,
   ) {
 
   }
@@ -20,8 +20,9 @@ export class TitleComponent implements OnInit {
   ngOnInit() {
   }
 
-  click() {
-    const path = this.router.url.split('/').splice(1, 2).toString().replace(/[,]/g, '/');
-    this.router.navigate([path]);
+  click(data?: any) {
+    // console.log('selected ' + data);
+    this.router.navigate([`../demo`], { relativeTo: this.activatedRoute.parent });
   }
+
 }

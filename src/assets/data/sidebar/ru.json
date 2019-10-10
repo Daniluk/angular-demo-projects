@@ -1,0 +1,9 @@
+{
+    "items": [
+        {
+            "id": "text-editor",
+            "text": "Текстовый редактор",
+            "routerLink": "text-editor"
+        }
+    ]
+}

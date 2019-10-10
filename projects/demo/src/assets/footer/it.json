@@ -1,0 +1,49 @@
+[
+    {
+        "id": 0,
+        "name": "Revision"
+    },
+    {
+        "id": 1,
+        "name": "pubblicità"
+    },
+    {
+        "id": 2,
+        "name": "Supporto tecnico"
+    },
+    {
+        "id": 3,
+        "name": "Domande"
+    },
+    {
+        "id": 4,
+        "name": "Mappa del sito"
+    },
+    {
+        "id": 5,
+        "name": "Contatti"
+    },
+    {
+        "id": 7,
+        "name": "+18"
+    },
+    {
+        "id": 8,
+        "name": "tweeter",
+        "link": "http://tweeter.com"
+    },
+    {
+        "id": 9,
+        "name": "facebook",
+        "link": "http://facebook.com"
+    },
+    {
+        "id": 10,
+        "name": "vk",
+        "link": "http://vk.com"
+    },
+    {
+        "id": 6,
+        "name": "\u00A9 site, 2015-2019. All rights reserved."
+    }
+]

@@ -1,0 +1,6 @@
+<mat-nav-list>
+  <mat-list-item fxLayout="row wrap" fxLayoutAlign="start center" *ngFor="let item of items">
+    <button matLine mat-button routerLink="{{item.routerLink}}" routerLinkActive="active"> {{item.text}} {{item.name}}
+    </button>
+  </mat-list-item>
+</mat-nav-list>

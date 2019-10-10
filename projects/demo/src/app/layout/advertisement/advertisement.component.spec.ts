@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { DemoMaterialModule } from '../../../../../shared-modules/material-module';
+
 import { AdvertisementComponent } from './advertisement.component';
 
 describe('AdvertisementComponent', () => {
@@ -8,9 +8,6 @@ describe('AdvertisementComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        DemoMaterialModule
-      ],
       declarations: [ AdvertisementComponent ]
     })
     .compileComponents();

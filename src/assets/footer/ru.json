@@ -1,0 +1,49 @@
+[
+    {
+        "id": 0,
+        "name": "Редакция"
+    },
+    {
+        "id": 1,
+        "name": "Реклама"
+    },
+    {
+        "id": 2,
+        "name": "Техподдержка"
+    },
+    {
+        "id": 3,
+        "name": "Вопросы"
+    },
+    {
+        "id": 4,
+        "name": "Карта сайта"
+    },
+    {
+        "id": 5,
+        "name": "Контакты"
+    },
+    {
+        "id": 7,
+        "name": "+18"
+    },
+    {
+        "id": 8,
+        "name": "tweeter",
+        "link": "http://tweeter.com"
+    },
+    {
+        "id": 9,
+        "name": "facebook",
+        "link": "http://facebook.com"
+    },
+    {
+        "id": 10,
+        "name": "vk",
+        "link": "http://vk.com"
+    },
+    {
+        "id": 6,
+        "name": "\u00A9 site, 2015-2019. All rights reserved."
+    }
+]

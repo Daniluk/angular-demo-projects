@@ -7,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdvertisementComponent implements OnInit {
 
-  constructor(
-  ) {
-
-  }
+  constructor() { }
 
   ngOnInit() {
   }

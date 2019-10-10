@@ -1,0 +1,28 @@
+<mat-nav-list *ngIf="!currentUser" id="authentication">
+  <mat-list-item class="sidenav-list-item">
+    <a i18n="@@sign-up-button">Sign Up</a>
+  </mat-list-item>
+  <mat-list-item>
+    <a i18n="@@sign-in-button" aria-label="settings" (click)="login()">Sign In</a>
+  </mat-list-item>
+</mat-nav-list>
+<mat-nav-list>
+  <div *ngIf="currentUser" id="user-info">
+    <mat-nav-list>
+      <a mat-list-item>
+        <img class="avatar" src="{{currentUser.image}}" alt="" />
+        <div class="user-name">
+          <span>{{ currentUser?.first_name }} </span>
+          <span>{{ currentUser?.middle_name }} </span>
+          <span>{{ currentUser?.last_name }} </span>
+        </div>
+
+      </a>
+      <mat-list-item id="logout">
+        <mat-icon>exit_to_app</mat-icon>
+        <span (click)="logout()">Logout</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </div>
+  <mat-divider></mat-divider>
+</mat-nav-list>
