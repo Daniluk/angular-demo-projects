@@ -1,9 +1,9 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[appTextEditorToolbar]'
+  selector: '[appTextEditorTextarea]'
 })
-export class TextEditorToolbarDirective {
+export class TextEditorTextareaDirective {
 
   constructor() { }
 
