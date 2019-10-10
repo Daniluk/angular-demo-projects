@@ -1,12 +1,18 @@
 import { TestBed } from '@angular/core/testing';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TextEditorSynonymsService } from './text-editor-synonyms.service';
 
 describe('TextEditorSynonymsService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let service: TextEditorSynonymsService;
+
+  beforeEach(() => TestBed.configureTestingModule({
+    imports: [HttpClientTestingModule],
+    providers: [TextEditorSynonymsService],
+  }));
 
   it('should be created', () => {
-    const service: TextEditorSynonymsService = TestBed.get(TextEditorSynonymsService);
+    service = TestBed.get(TextEditorSynonymsService);
     expect(service).toBeTruthy();
   });
 });

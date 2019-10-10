@@ -1,1 +1,12 @@
-<p>text-editor-synonyms works!</p>
+<ng-template [ngIf]="synonyms">
+    <div id="synonyms">
+        <button appTextEditorSynonyms mat-raised-button *ngFor="let item of synonyms" class="name"
+            name="{{item}}">{{item}}</button>
+    </div>
+</ng-template>
+
+<ng-template [ngIf]="!synonyms">
+    <div id="synonyms">
+        <span>synonyms</span>
+    </div>
+</ng-template>

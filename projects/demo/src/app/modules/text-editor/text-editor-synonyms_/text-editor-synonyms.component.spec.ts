@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TextEditorSynonymsComponent } from './text-editor-synonyms.component';
-import { TextEditorSynonymsDirective } from './text-editor-synonyms.directive';
 
 describe('TextEditorSynonymsComponent', () => {
   let component: TextEditorSynonymsComponent;
@@ -9,9 +8,9 @@ describe('TextEditorSynonymsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TextEditorSynonymsComponent, TextEditorSynonymsDirective]
+      declarations: [ TextEditorSynonymsComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {
@@ -23,5 +22,4 @@ describe('TextEditorSynonymsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });
