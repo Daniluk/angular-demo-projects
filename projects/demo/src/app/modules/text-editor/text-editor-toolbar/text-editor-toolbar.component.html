@@ -1,1 +1,11 @@
-<p>text-editor-toolbar works!</p>
+<mat-toolbar>
+    <button mat-raised-button appTextEditorToolbar *ngFor="let item of items_style" name="{{item.BUTTON_NAME}}"
+        title="{{item.TITLE}}" status='format'>
+        <mat-icon>{{item.BUTTON_NAME}}</mat-icon>
+    </button>
+
+    <button mat-raised-button appTextEditorToolbar *ngFor="let item of items_align" name="{{item.BUTTON_NAME}}"
+        title="{{item.TITLE}}" status='align'>
+        <mat-icon>{{item.BUTTON_NAME}}</mat-icon>
+    </button>
+</mat-toolbar>

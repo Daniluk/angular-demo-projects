@@ -1,0 +1,29 @@
+:host {
+  .mat-toolbar {
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding: 0;
+  }
+
+  button {
+    margin: 0.21rem 0.21rem;
+    background-color: #424242;
+  }
+
+  button:focus {
+    background-color: chocolate;
+  }
+
+  button:active {
+    color: blue;
+  }
+
+  button:hover {
+    background-color: #3e8e41;
+  }
+
+  .active {
+    background-color: chocolate;
+  }
+}

@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { DemoMaterialModule } from '../../../../../../shared-modules/material-module';
+
 import { TextEditorToolbarComponent } from './text-editor-toolbar.component';
 
 describe('TextEditorToolbarComponent', () => {
@@ -8,13 +8,9 @@ describe('TextEditorToolbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TextEditorToolbarComponent],
-      imports: [
-        DemoMaterialModule,
-      ],
-      providers: []
+      declarations: [ TextEditorToolbarComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {

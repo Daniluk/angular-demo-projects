@@ -21,7 +21,7 @@ export class MainLayoutComponent implements OnInit {
   isSmallScreen: boolean;
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(PLATFORM_ID) private platformId: {},
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private translate: TranslateService,
@@ -46,7 +46,6 @@ export class MainLayoutComponent implements OnInit {
       });
     const next: string[] = [...array.slice(2)];
     const n = array.slice(2).toString().replace(/,/g, '/');
-    console.log(n, this.location.path());
     return n;
   }
 
@@ -78,7 +77,6 @@ export class MainLayoutComponent implements OnInit {
 
     this.lang = this.settings.userLanguage;
     const array = LOCALIZATION.items.map(item => item.code);
-    console.log(array);
 
     this.translate.addLangs([...array]);
     this.translate.currentLang = this.lang;
