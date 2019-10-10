@@ -16,7 +16,6 @@ import { SidebarService } from './sidebar.service';
 export class SidebarComponent implements OnInit {
   menuItems: any[];
   items: any[];
-  // itemsTemp = any;
   sortedData: any[];
   animal: string;
   name: string;
@@ -39,13 +38,11 @@ export class SidebarComponent implements OnInit {
 
     this.changeLangService.setLang$.subscribe((data) => {
       this.settings = data;
-      console.log('SidebarComponent', data);
     });
 
     this.translate.onLangChange
       .subscribe((event: LangChangeEvent) => {
         const currentLang = event.lang;
-        // console.log('SidebarComponent', currentLang);
         this.lang = event.lang;
         this.getItems(currentLang);
       });

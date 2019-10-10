@@ -47,27 +47,21 @@ export class HeaderComponent implements OnInit {
       localStorage.setItem(CONFIG.LOCAL_STORAGE.SETTINGS, JSON.stringify(this.settings));
     }
 
-    console.log(localStorage);
-    // console.log(localStorage, this.currentUser, this.locale);
-    // this.locale = this.selected;
   }
 
   setLocale(locale) {
     this.locale = locale;
-    // localStorage.setItem('currentLocale', (this.locale));
-    // this.locale = localStorage.getItem('currentLocale') ;
-    // console.log('locale', locale, this.locale);
   }
 
   changeClient(data) {
-    // console.log('selected ' + data);
+
   }
 
   click(data) {
-    // console.log('selected ' + data);
+
   }
 
   onAppClickToStartProcess(data) {
-    // console.log('onAppClickToStartProcess ' + data);
+
   }
 }

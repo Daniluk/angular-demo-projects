@@ -17,6 +17,7 @@ import { MenuTopComponent } from './menu-top/menu-top.component';
 import { SearchComponent } from './search/search.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TitleComponent } from './title/title.component';
+import { DialogComponent } from '../../../../shared-modules/users/dialog/dialog.component';
 
 @NgModule({
   imports: [
@@ -41,8 +42,10 @@ import { TitleComponent } from './title/title.component';
     MenuTopComponent,
     AuthenticationComponent,
     ThemePickerComponent,
-    AdvertisementComponent
-  ]
+    AdvertisementComponent,
+    DialogComponent
+  ],
+  entryComponents: [DialogComponent],
 })
 export class LayoutModule {
   constructor() {

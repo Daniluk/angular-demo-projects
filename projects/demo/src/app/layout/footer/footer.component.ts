@@ -15,13 +15,12 @@ export class FooterComponent implements OnInit {
   items: FooterItem[];
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(PLATFORM_ID) private platformId: {},
     private service: FooterService,
     private translate: TranslateService
   ) {
     this.translate.onLangChange
       .subscribe((event: LangChangeEvent) => {
-        console.log('FooterComponent', event.lang);
         const currentLang = event.lang;
         this.getItems(currentLang);
       });

@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { VSTranslateModule } from '../../../shared-modules/translate/vs-translate.module';
+import { DialogComponent } from '../../../shared-modules/users/dialog/dialog.component';
 
 // List of providers
 const providers = [];
@@ -28,6 +29,7 @@ const providers = [];
   providers: [
     ...providers
   ],
+  // entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
