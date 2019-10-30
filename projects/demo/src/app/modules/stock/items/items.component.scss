@@ -1,0 +1,43 @@
+:host {
+  .mat-list {
+    width: 70%;
+  }
+  .mat-card {
+    margin: 2px;
+    cursor: pointer;
+    width: 95%;
+    height: 150px;
+  }
+  .mat-card-image {
+    height: 100%;
+    width: auto;
+    margin-right: 0px;
+  }
+  .name {
+    font-size: 1.125rem;
+    font-family: CabinPde;
+    color: #7a98a7;
+  }
+  .cost {
+    font-size: 1.125rem;
+    font-family: CabinPdf;
+    color: #a9a9a9;
+  }
+
+  .cardflag:before {
+    box-shadow: 0 1px 4px rgba(0,0,0,.2);
+    font-size: 12px;
+    font-size: .75rem;
+    content: "New!";
+    display: block;
+    top: .413rem;
+    left: -.25rem;
+    padding: .18rem .45rem .2rem;
+    background-color: #ed1c24;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+}
+}

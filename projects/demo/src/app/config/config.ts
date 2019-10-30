@@ -10,9 +10,9 @@ export const CONFIG = {
             NAME: 'text-editor',
             LINK: 'text-editor'
         },
-        CUSTOMERS: {
-            NAME: 'customers',
-            LINK: 'customers'
+        STOCK: {
+            NAME: 'stock',
+            LINK: 'stock'
         }
     },
 };

@@ -53,6 +53,7 @@ export class TextEditorToolbarDirective implements OnInit {
   private setToolBarButtonClickedSubscribe(): void {
     this.serviceTextEditor.setToolBarButtonClicked$.subscribe((data: string) => {
       Object.entries(TEXT_EDITOR_TOOLBAR.TYPE).forEach((value) => {
+        // tslint:disable-next-line: no-string-literal
         const button: any = value.filter(item => item['TAG'] && item['TAG'].includes(data.toLowerCase()))[0];
         if (button && this.el.nativeElement.getAttribute('name') === button.BUTTON_NAME) {
           this.setButtonClicked();

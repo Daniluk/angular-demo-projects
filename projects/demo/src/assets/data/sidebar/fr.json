@@ -1,0 +1,14 @@
+{
+    "items": [
+        {
+            "id": "text-editor",
+            "text": "éditeur de texte",
+            "routerLink": "text-editor"
+        },
+        {
+            "id": "stock",
+            "text": "magasin",
+            "routerLink": "stock"
+        }
+    ]
+}

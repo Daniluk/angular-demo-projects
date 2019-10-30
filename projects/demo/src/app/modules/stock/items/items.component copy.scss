@@ -1,0 +1,38 @@
+:host {
+  img {
+    /* height: 2px;
+     visibility: hidden; */
+  }
+  div {
+    width: 100%;
+    height: 150px;
+    background-position: center;
+  }
+  /* .mat-card-content {
+    width: 100%;
+    min-width: 430px;
+  } */
+
+  .mat-card-content img {
+    width: 100%;
+    /* height: 5px; 
+    visibility: hidden;*/
+  }
+
+  .mat-card {
+    margin: 2px;
+    cursor: pointer;
+    max-width: 200px;
+    width: 100%;
+    height: 150px;
+  }
+
+  .healthy-search {
+    width: 100%;
+  }
+
+  .healthy-card {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+}

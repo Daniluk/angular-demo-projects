@@ -1,0 +1,17 @@
+<mat-list style="display: flex; flex-direction: row; flex-wrap: wrap;" fxLayoutGap="25px" fxLayoutAlign="center">
+    <mat-card fxLayout="column" fxFlex="28" fxFlex.xs="100" fxFlex.sm="80" fxFlex.md="40" mat-list-item
+        *ngFor="let item of items" (click)="onClick(item)">
+        <mat-card-content>
+            <div [ngStyle]="{'background-image':'url('+item.media.thumbnailSmall.url+')'}"></div>
+            <img style="height: 10px; width: 100%;" src="{{item.media.thumbnailSmall.url}}" onerror="this.style.display='none'" />
+        </mat-card-content>
+        <mat-card-title-group>
+            <mat-card-title>{{item.name}}</mat-card-title>
+            <!-- <mat-card-subtitle>{{item.media.imageSmall.url}}</mat-card-subtitle> -->
+            <!-- <mat-card-title>{{item.title | title}}</mat-card-title>
+        <mat-card-subtitle>{{item.date_created | date:'dd/MM/yyyy'}}</mat-card-subtitle> -->
+        </mat-card-title-group>
+        <!-- <div [ngStyle]="{'background-image':'url('+item.media.thumbnailSmall.url+')'}"></div> -->
+        <!-- <div style="background-image:(url('{{item.media.thumbnailSmall.url}}'));"></div> -->
+    </mat-card>
+</mat-list>

@@ -8,6 +8,7 @@
 /bazel-out
 /temp
 /projects/demo/src/app/layout_
+/projects/demo/src/app/modules/stock/temp
 
 # dependencies
 /node_modules

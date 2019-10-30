@@ -1,0 +1,91 @@
+<!--
+<mat-list style="display: flex; flex-direction: row; flex-wrap: wrap;" fxLayoutGap="25px" fxLayoutAlign="center"
+    *ngIf='items'>
+    <mat-card fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%" fxLayoutAlign="center" mat-list-item
+        *ngFor="let item of items.products" (click)="onClick(item)">
+        <mat-card-content>
+              <div [ngStyle]="{'background-image':'url('+item.media.thumbnailSmall.url+')'}"></div>
+            <img style="height: 10px; width: 100%;" src="{{item.media.thumbnailSmall.url}}" onerror="this.style.display='none'" /> 
+        </mat-card-content>
+        <mat-card-title-group>
+            <mat-card-title>{{item.name}}</mat-card-title>
+            <mat-card-title>{{item.cost}}</mat-card-title>
+        </mat-card-title-group>
+    </mat-card>
+</mat-list>
+
+<mat-list style="display: flex; flex-direction: row; flex-wrap: wrap;" fxLayoutGap="25px" fxLayoutAlign="center"
+    *ngIf='items'>
+    <mat-card flex="25" fxLayout.xs="row" fxLayoutGap="1%" fxLayoutAlign="center" *ngFor="let item of items.products">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            alt="Photo of a Shiba Inu" />
+        <mat-card-content>
+            <p>
+                The Shiba Inu is the smallest of the six original and distinct spitz
+                breeds of dog from Japan. A small, agile dog that copes very well with
+                mountainous terrain, the Shiba Inu was originally bred for hunting.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>LIKE</button> <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+</mat-list>
+-->
+<div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="start">
+    <div class="flex-item" fxFlex="90%" fxFlex.xs="90%">
+      <mat-form-field class="healthy-search">
+        <textarea matInput placeholder="Suche"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="start">
+    <div class="flex-item" fxFlex="85%" fxFlex.xs="85%">
+      <mat-expansion-panel>
+        <div class="flex-container" fxLayoutWrap fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="start">
+          <div class="flex-item healthy-card" fxFlex="400px" *ngFor="let _ of [1,2,3,4,5,6]" (click)="onClick()">
+                <mat-card fxFlex="0 1 calc(33% - 2rem)" fxFlex.lt-md="0 1 calc(50% - 32px)" fxFlex.lt-sm="100%">
+                        <div >
+              
+                          <div class="header" gdArea="header">
+                            Header
+                          </div>
+                          <div class="side" gdArea="side">
+                            Side
+                          </div>
+                          <div class="content" gdArea="content">
+                            Content
+                          </div>
+                          <div class="footer" gdArea="footer">
+                            Footer
+                          </div>
+                        </div>
+                      </mat-card>
+            <!-- <mat-card class="example-card">
+              <mat-card-header>
+                <mat-card-title>Title </mat-card-title>
+                <button mat-icon-button fxLayoutAlign="right">
+                  <mat-icon aria-label="Example icon-button with a heart icon">Edit</mat-icon>
+                </button>
+                <button mat-icon-button fxLayoutAlign="right">
+                  <mat-icon aria-label="Example icon-button with a heart icon">Delete</mat-icon>
+                </button>
+              </mat-card-header>
+              <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
+                  very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                </p>
+              </mat-card-content>
+            </mat-card> -->
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </div>
+  </div>

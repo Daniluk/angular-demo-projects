@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError, map, pluck, switchMap, take, toArray } from 'rxjs/operators';
+import { Observable, throwError, of } from 'rxjs';
+import { catchError, map, pluck, switchMap, take, toArray, tap } from 'rxjs/operators';
 import { IData } from '../interfaces/IData';
 import { CONFIG } from './../config/config';
 
@@ -21,23 +21,13 @@ export class TextEditorTextareaService {
       .pipe(
         map((data: IData[]) => data.filter(item => item.tags && item.tags.includes('syn'))),
         switchMap((data: IData[]) => data),
+        tap(data => console.log('_', data)),
         pluck('word'),
         take(10),
         toArray(),
         map((data: string[]) => { data.push(value); return data; }),
-        catchError(this.handleError),
+        catchError((err, caught) => caught),
       );
   }
 
-  private handleError(rawError) {
-    let error: any;
-
-    if (rawError instanceof HttpErrorResponse) {
-      error = rawError.error || {};
-    } else {
-      error = rawError.message ? rawError.message : JSON.stringify(rawError);
-    }
-
-    return throwError(error);
-  }
 }

@@ -1,0 +1,25 @@
+:host {
+    .navbar {
+        padding-left: 0.7rem;
+    }
+
+    .collapse:not(.show) {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    ul {
+        flex-direction: row;
+    }
+
+   /*  .nav-link {
+        padding: 0 1em;
+    } */
+
+    .form-inline  {
+        padding-left: 0rem;
+    }
+    .navbar-nav li {
+        padding-right: 1rem;
+    }
+}

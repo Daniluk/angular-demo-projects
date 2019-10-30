@@ -9,7 +9,7 @@ import { MainComponent } from '../components/main/main.component';
 import { HomeComponent } from './home/home.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { TextEditorModule } from '../modules/text-editor/text-editor.module';
-// import { CustomersModule } from '../modules/customers/customers.module';
+import { StockModule } from '../modules/stock/stock.module';
 
 const nameProject = CONFIG.NAME_PROJECT;
 
@@ -22,6 +22,7 @@ const routes: Routes = [
     children: [
       { path: `:lang`, component: MainComponent },
       { path: `:lang/${CONFIG.TYPE.TEXT_EDITOR.LINK}`, loadChildren: () => TextEditorModule, data: { type: CONFIG.TYPE.TEXT_EDITOR } },
+      { path: `:lang/${CONFIG.TYPE.STOCK.LINK}`, loadChildren: () => StockModule, data: { type: CONFIG.TYPE.STOCK } },
       // { path: CONFIG.TYPE.CUSTOMERS.LINK, loadChildren: () => CustomersModule, data: { type: CONFIG.TYPE.CUSTOMERS } },
       { path: '**', redirectTo: `${nameProject}/en`, pathMatch: 'full' },
     ]

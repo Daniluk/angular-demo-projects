@@ -1,11 +1,33 @@
 <mat-toolbar>
-    <button mat-raised-button appTextEditorToolbar *ngFor="let item of items_style" name="{{item.BUTTON_NAME}}"
+    <button mat-raised-button appTextEditorToolbar *ngFor="let item of itemsStyle" name="{{item.BUTTON_NAME}}"
         title="{{item.TITLE}}" status='format'>
         <mat-icon>{{item.BUTTON_NAME}}</mat-icon>
     </button>
 
-    <button mat-raised-button appTextEditorToolbar *ngFor="let item of items_align" name="{{item.BUTTON_NAME}}"
+    <button mat-raised-button appTextEditorToolbar *ngFor="let item of itemsAlign" name="{{item.BUTTON_NAME}}"
         title="{{item.TITLE}}" status='align'>
         <mat-icon>{{item.BUTTON_NAME}}</mat-icon>
     </button>
+    <button mat-raised-button id="fonts">
+        <mat-select id="select-font" [(ngModel)]="selectedFont" (ngModelChange)="onChangeFont($event)" name="fonts">
+            <mat-option *ngFor="let item of baseFonts" [value]="item">
+                {{item}}
+            </mat-option>
+        </mat-select>
+    </button>
+
+    <button mat-raised-button>
+        <mat-select [(ngModel)]="selectedFontSize" (ngModelChange)="onChangeFontSize($event)" name="fontSize">
+            <mat-option [value]="item" *ngFor="let item of fontSizes">
+                {{item}}
+            </mat-option>
+        </mat-select>
+    </button>
+
+    <!--     <button mat-raised-button>
+        <input matInput [(ngModel)]="selected" type="number" min="1" id="end">
+    </button> -->
 </mat-toolbar>
+<input type="color" value="" #navColor style="display: none" />
+
+<!-- <input id="background-color" type="color" /> -->

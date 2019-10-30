@@ -1,0 +1,14 @@
+<div fxFlex fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" style="height: 100%;">
+    <mat-list fxLayout="column wrap" fxLayoutAlign="space-between" *ngIf='items'>
+        <mat-card fxLayout="row" fxLayoutGap="1rem" *ngFor="let item of items">
+            <mat-card-header fxLayout="column">
+                <img *ngIf='item.media' mat-card-image src="{{item.media.imageMedium.url}}" />
+            </mat-card-header>
+            <mat-card-content fxLayout="column" fxLayoutAlign="">
+                <p class="name">{{item.name}}</p>
+                <p class="cost">{{item.cost}}</p>
+            </mat-card-content>
+        </mat-card>
+    </mat-list>
+    <app-sidebar></app-sidebar>
+</div>

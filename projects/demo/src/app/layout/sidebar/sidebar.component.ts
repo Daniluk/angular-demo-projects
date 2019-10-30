@@ -2,7 +2,7 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
-import ISettings from '../../../../../shared-modules/settings/interfaces/ISettings.js';
+import ISettings from '../../../../../shared-modules/settings/interfaces/ISettings';
 import IUser from '../../../../../shared-modules/users/user/interfaces/IUser';
 import { UserService } from '../../../../../shared-modules/users/user/user.service';
 import { ChangeLangService } from '../change-lang/change-lang.service';
