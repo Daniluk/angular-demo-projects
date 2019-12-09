@@ -9,6 +9,26 @@
             "id": "stock",
             "text": "Магазин",
             "routerLink": "stock"
+        },
+        {
+            "id": "books",
+            "text": "Книги",
+            "routerLink": "books"
+        },
+        {
+            "id": "movies",
+            "text": "Фильмы",
+            "routerLink": "movies"
+        },
+        {
+            "id": "courses",
+            "text": "курсы",
+            "routerLink": "courses"
+        },
+        {
+            "id": "jokes",
+            "text": "jokes",
+            "routerLink": "jokes"
         }
     ]
 }

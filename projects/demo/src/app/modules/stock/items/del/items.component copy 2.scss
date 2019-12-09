@@ -1,0 +1,61 @@
+:host {
+  .mat-list {
+    width: 70%;
+  }
+  .mat-card {
+    margin: 2px;
+    cursor: pointer;
+    width: 95%;
+    height: 150px;
+    padding: 1rem;
+  }
+  .mat-card-image {
+    height: 100%;
+    width: auto;
+    max-width: 300px;
+    margin-left: 0.2rem;
+    margin-right: 0px;
+  }
+  .name {
+    font-size: 1.2rem;
+    font-family: CabinPde;
+    color: #7a98a7;
+  }
+  .cost {
+    font-size: 1.2rem;
+    font-family: CabinPdf;
+    color: #a9a9a9;
+  }
+  .cardflag:before {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    font-size: 0.75rem;
+    content: "New!";
+    display: block;
+    top: 0.413rem;
+    left: -0.25rem;
+    padding: 0.18rem 0.45rem 0.2rem;
+    background-color: #ed1c24;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+/*   .mat-card-actions {
+    align-self: flex-end;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+  } */
+  .mat-card-actions button {
+    /* width: 100%; */
+    margin: 0.5rem 0;
+    background-color: #df3238;
+  }
+
+  .mat-card-actions:last-child {
+    margin: 0rem;
+    padding-bottom: 0.5rem;
+  }
+}

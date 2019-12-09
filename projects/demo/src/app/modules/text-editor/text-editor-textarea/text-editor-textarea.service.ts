@@ -29,5 +29,4 @@ export class TextEditorTextareaService {
         catchError((err, caught) => caught),
       );
   }
-
 }

@@ -30,14 +30,16 @@ export class TextEditorTextareaDirective implements OnInit {
 
   @HostListener('document:mouseup', ['$event'])
   onMouseUp(event: MouseEvent) {
-    this.range = window.getSelection().getRangeAt(0);
-    const word: string = this.range.startContainer.textContent
-      .slice(this.range.startOffset, this.range.endOffset);
-    console.log('mouseUp', this.range.startContainer.parentElement);
-    if (word.length > 0) {
+    if (window.getSelection().rangeCount > 0) {
+      this.range = window.getSelection().getRangeAt(0);
+      const word: string = this.range.startContainer.textContent
+        .slice(this.range.startOffset, this.range.endOffset);
+      console.log('mouseUp', this.range.startContainer.parentElement);
+      if (word.length > 0) {
 
+      }
+      this.parentTag = this.range.startContainer.parentElement;
     }
-    this.parentTag = this.range.startContainer.parentElement;
   }
 
   @HostListener('click', ['$event.target'])
@@ -61,7 +63,7 @@ export class TextEditorTextareaDirective implements OnInit {
         tag = tag.parentElement;
       }
     }
-    console.log(this.parentTag, this.target, target.parentElement, this.range.startContainer);
+    // console.log(this.parentTag, this.target, target.parentElement, this.range.startContainer);
   }
 
   ngOnInit() {

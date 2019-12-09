@@ -1,0 +1,14 @@
+<!-- <p>list-books works!{{(items$ | async )?.length}}</p> -->
+<mat-list fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxLayout="row wrap"  *ngFor="let item of (items$ | async)">
+        <mat-card-title-group fxLayout="row" fxFlex="100">
+            <img mat-card-sm-image *ngIf="item.volumeInfo.imageLinks" [src]="item.volumeInfo.imageLinks.thumbnail" />
+            <mat-card-title>{{ item.volumeInfo.title }}</mat-card-title>
+            <mat-card-subtitle *ngIf="item.volumeInfo.subtitle">{{(item.volumeInfo.subtitle | slice:0:100)+' ...'}}
+            </mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-card-content>
+            <p *ngIf="item.volumeInfo.description">{{(item.volumeInfo.description | slice:0:300)+' ...'}}</p>
+        </mat-card-content>
+    </mat-card>
+</mat-list>

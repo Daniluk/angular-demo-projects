@@ -1,0 +1,15 @@
+<div class="buttons">
+    <button mat-raised-button (click)="loadAllRequested()" style="margin-right:10px;"> Load All</button>
+    <button mat-raised-button (click)="loadCategoryRequested()"> Load Nerdy </button>
+</div>
+
+<mat-list fxLayout="row wrap"  fxLayoutAlign="center center">
+    <mat-card *ngFor="let item of (items$ | async)">
+        <mat-card-header>
+            <mat-card-title>Joke #{{item.id}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{item.joke}}</p>
+        </mat-card-content>
+    </mat-card>
+</mat-list>

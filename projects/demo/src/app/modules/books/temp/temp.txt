@@ -1,0 +1,18 @@
+https://ngrx.github.io/platform/example-app/#/books
+ngrx-platform\projects\example-app\src\app\books
+
+https://stackblitz.com/github/denizcoskun/nutrifacts-ngrx-store
+
+
+https://nutrifacts-app.firebaseapp.com/mylist
+
+
+PS F:\projects\angular\tutorial\ngrx-platform> ng serve
+
+!!! https://stackblitz.com/github/denizcoskun/nutrifacts-ngrx-store
+
+
+
+!!! https://stackblitz.com/github/denizcoskun/nutrifacts-ngrx-store
+https://stackblitz.com/edit/tour-of-heroes-ngrx-entity?file=src%2Fentities%2Fheroes%2Fhero-reducer.ts&source=post_page---------------------------
+https://stackblitz.com/edit/angular-multiple-entities-in-same-state

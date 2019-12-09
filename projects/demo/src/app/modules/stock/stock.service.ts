@@ -8,8 +8,6 @@ export class StockService {
   category: any;
 
   constructor() {
-    this.category = {
-      key: '31782'
-    };
+
   }
 }

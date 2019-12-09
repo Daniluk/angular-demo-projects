@@ -1,42 +1,23 @@
-<div fxFlex fxLayout="row" fxLayout.sm="column" fxLayout.xs="column"  style="height: 100%;">
-    <ng-container  [ngTemplateOutlet]="menu"> </ng-container>
+<div fxFlex fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" style="height: 100%;">
+    <ng-container [ngTemplateOutlet]="menu"> </ng-container>
     <app-sidebar></app-sidebar>
-    <!-- <ng-container [ngTemplateOutlet]="sidebar"></ng-container> -->
 </div>
 
 <ng-template #menu>
-    <mat-list fxLayout="row wrap" fxLayoutGap="25px" fxLayoutAlign="center">
+    <mat-list fxLayout="row wrap" fxLayoutAlign="center">
         <mat-toolbar>
             <span class="title">MENU</span>
         </mat-toolbar>
         <mat-card fxLayout="column" fxFlex="28" fxFlex.xs="100" fxFlex.sm="80" fxFlex.md="40" mat-list-item
-            *ngFor="let item of items" (click)="onClick(item)">
-            <mat-card-content>
+            *ngFor="let item of (items$ | async)" (click)="onClick(item)">
+            <mat-card-content *ngIf='item.values'>
                 <div [ngStyle]="{'background-image':'url('+item.values.media.thumbnailSmall.url+')'}"></div>
                 <img style="height: 5px; width: 100%;" src="{{item.values.media.thumbnailSmall.url}}"
                     onerror="this.style.display='none'" />
             </mat-card-content>
-            <mat-card-title-group>
+            <mat-card-title-group *ngIf='item.values'>
                 <mat-card-title>{{item.values.name}}</mat-card-title>
             </mat-card-title-group>
         </mat-card>
     </mat-list>
 </ng-template>
-
-<!-- <ng-template #sidebar>
-    <mat-list style="min-width: 30%;" fxLayout="column wrap">
-        <mat-toolbar>
-            <span class="title">YOUR LOCATION</span>
-        </mat-toolbar>
-        <app-location></app-location>
-        <mat-toolbar>
-            <span class="title">YOUR BASKET</span>
-        </mat-toolbar>
-        <app-basket></app-basket>
-        <mat-toolbar>
-            <span class="title">HAVE A QUESTION?</span>
-        </mat-toolbar>
-
-    </mat-list>
-
-</ng-template> -->

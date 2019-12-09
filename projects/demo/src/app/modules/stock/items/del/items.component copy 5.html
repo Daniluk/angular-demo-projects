@@ -1,0 +1,20 @@
+<div fxFlex fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" style="height: 100%;">
+    <mat-list fxLayout="row wrap" fxLayoutAlign="space-between" *ngIf='items' fxFlex.xs="grow shrink initial">
+        <mat-card mat-list-item fxLayout="row" fxLayoutGap="1rem" *ngFor="let item of items">
+            <div fxFlex fxLayout="row" fxLayoutGap="1rem" fxLayoutGap.xs="7rem" fxLayout.xs="column">
+                <mat-card-header fxLayout="column" fxFlex="0 0 40%" fxFlex.xs="0 0 7%">
+                    <img mat-card-image *ngIf='item.media' src="{{item.media.imageMedium.url}}" />
+                </mat-card-header>
+                <mat-card-content fxLayout="column" fxLayout.xs="row"  fxLayoutAlign="">
+                    <p class="name">{{item.name}}</p>
+                    <p class="cost">{{item.cost}}</p>
+                </mat-card-content>
+            </div>
+            <mat-card-actions class="push" fxLayout="column">
+                <button mat-raised-button type="button">View item</button>
+                <button mat-raised-button type="submit">Order now</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-list>
+    <app-sidebar></app-sidebar>
+</div>

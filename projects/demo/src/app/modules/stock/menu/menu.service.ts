@@ -18,11 +18,11 @@ export class MenuService {
     return this.http.get(url)
       .pipe(
         map((data: any) => data.categories),
+        tap(data => console.log('_', data)),
         switchMap((data: any) => data),
         pluck('id'),
         toArray(),
         tap(data => console.log('_', data)),
-
       );
   }
 

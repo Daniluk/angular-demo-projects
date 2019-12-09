@@ -1,43 +1,66 @@
 :host {
-  .mat-list {
-    width: 70%;
-  }
+  --main-height: 150px;
+
   .mat-card {
     margin: 2px;
     cursor: pointer;
     width: 95%;
     height: 150px;
+    padding: 1rem;
   }
   .mat-card-image {
-    height: 100%;
-    width: auto;
-    margin-right: 0px;
+    margin-left: 0.2rem;
+    margin-right: 1rem;
   }
   .name {
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     font-family: CabinPde;
     color: #7a98a7;
   }
   .cost {
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     font-family: CabinPdf;
     color: #a9a9a9;
   }
+  .mat-card-actions {
+    align-self: flex-start;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .mat-card-actions button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  /* .push {
+    margin-right: 0;
+  } */
 
-  .cardflag:before {
-    box-shadow: 0 1px 4px rgba(0,0,0,.2);
-    font-size: 12px;
-    font-size: .75rem;
-    content: "New!";
-    display: block;
-    top: .413rem;
-    left: -.25rem;
-    padding: .18rem .45rem .2rem;
-    background-color: #ed1c24;
-    color: #fff;
-    font-weight: 500;
-    text-align: center;
-    text-transform: uppercase;
-    z-index: 1;
-}
+  .mat-card-content > :last-child:not(.mat-card-footer),
+  .mat-card > :last-child:not(.mat-card-footer) {
+    margin-bottom: 12px;
+    margin-right: -3px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .mobile {
+    font-size: 1rem;
+    background-color: #424242;
+  }
+  .img-desktop {
+    height: 100%;
+    width: auto;
+    max-width: calc(var(--main-height) * 1.77);
+    max-width: 224px;
+  }
+  .img-mobile {
+    height: 100%;
+    max-height: 100px;
+    max-width: calc(var(--main-height) * 1.77);
+    width: auto;
+/*     max-width: calc(var(--main-height) * 1.77); */
+  }
 }
