@@ -9,6 +9,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { VSTranslateModule } from '../../../shared-modules/translate/vs-translate.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './store/reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import {RouterStateSerializer, StoreRouterConnectingModule, RouterState} from '@ngrx/router-store';
+// import { environment } from '../../environments/environment';
 // List of providers
 const providers = [];
 
@@ -24,7 +30,17 @@ const providers = [];
     AppRoutingModule,
     VSTranslateModule,
     LayoutModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    StoreModule.forRoot(reducers, {
+      metaReducers,
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true,
+      }
+    }),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EffectsModule.forRoot([]),
+    StoreRouterConnectingModule.forRoot({ routerState: RouterState.Minimal, stateKey: 'router' })
   ],
   providers: [
     ...providers

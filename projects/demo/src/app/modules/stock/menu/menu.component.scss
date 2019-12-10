@@ -1,0 +1,41 @@
+:host {
+  
+  .title {
+    font-size: 1.125rem;
+    font-family: CabinPdf;
+    color: #a9a9a9;
+  }
+
+  .mat-card-title {
+    font-size: 1.5rem;
+    font-family: CabinPdf;
+    color: #a9a9a9;
+  }
+
+  div {
+    width: 100%;
+    height: 150px;
+    background-position: center;
+  }
+
+  .mat-card-content img {
+    width: 100%;
+    height: 1px;
+    visibility: hidden;
+  }
+
+  .mat-card-content {
+    margin: 0;
+  }
+
+  .mat-card {
+    margin: 1.5rem 1rem 0;
+    cursor: pointer;
+    min-width: 150px;
+    max-width: 400px;
+  }
+
+  .mat-drawer-container {
+    height: -webkit-fill-available;
+  }
+}

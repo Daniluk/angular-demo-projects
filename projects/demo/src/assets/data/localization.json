@@ -1,0 +1,59 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "Русский",
+            "type": "ru",
+            "code": "ru",
+            "text": "Русский",
+            "image": "https://html5-dev.net/portblog/portal-api/upload/language/1/thumb/preview-55f008a696dd4.png",
+            "is_default": 1
+        },
+        {
+            "id": 2,
+            "name": "English",
+            "type": "en",
+            "code": "en",
+            "text": "English",
+            "image": "https://html5-dev.net/portblog/portal-api/upload/language/2/thumb/preview-55f008b85e45a.png",
+            "is_default": 0
+        },
+        {
+            "id": 3,
+            "name": "Deutsch",
+            "type": "de",
+            "code": "de",
+            "text": "Deutsch",
+            "image": "https://html5-dev.net/portblog/portal-api/upload/language/3/thumb/preview-55f008c31b523.png",
+            "is_default": 0
+        },
+        {
+            "id": 4,
+            "name": "Française",
+            "type": "fr",
+            "code": "fr",
+            "text": "Française",
+            "image": "https://html5-dev.net/portblog/portal-api/upload/language/4/thumb/preview-55f008c31b523.png",
+            "is_default": 0
+        },
+        {
+            "id": 5,
+            "name": "español",
+            "type": "es",
+            "code": "es",
+            "text": "español",
+            "image": "https://html5-dev.net/portblog/portal-api/upload/language/5/thumb/preview-55f008c31b523.png",
+            "is_default": 0
+        },
+        {
+            "id": 6,
+            "name": "italiano",
+            "type": "it",
+            "code": "it",
+            "text": "italiano",
+            "image": "https://html5-dev.net/portblog/portal-api/upload/language/5/thumb/preview-55f008c31b523.png",
+            "is_default": 0
+        }
+
+    ]
+}

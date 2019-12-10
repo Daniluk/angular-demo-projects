@@ -1,0 +1,31 @@
+<!-- <p>list-books works!{{(items$ | async)?.length}}</p> -->
+
+<mat-list fxLayout="row wrap"  fxLayoutAlign="center center">
+    <mat-card *ngFor="let item of (items$ | async)">
+        <mat-card-title-group>
+            <img mat-card-sm-image *ngIf="item.volumeInfo.imageLinks" [src]="item.volumeInfo.imageLinks.thumbnail" />
+            <mat-card-title>{{ item.volumeInfo.title }}</mat-card-title>
+            <mat-card-subtitle *ngIf="item.volumeInfo.subtitle">{{ item.volumeInfo.subtitle }}</mat-card-subtitle>
+        </mat-card-title-group>
+        <!-- <mat-card-header>
+            <mat-card-title>{{item.volumeInfo.title}}</mat-card-title>
+        </mat-card-header> -->
+        <mat-card-content>
+            <p>{{item.volumeInfo.description}}</p>
+        </mat-card-content>
+    </mat-card>
+
+    <!--     <mat-card *ngFor="let item of (items$ | async)">
+        <mat-card-title-group>
+            <img mat-card-sm-image *ngIf="thumbnail" [src]="thumbnail" />
+            <mat-card-title>{{ title | bcEllipsis:35 }}</mat-card-title>
+            <mat-card-subtitle *ngIf="subtitle">{{ subtitle | bcEllipsis:40 }}</mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-card-content>
+            <p *ngIf="description">{{ description | bcEllipsis }}</p>
+        </mat-card-content>
+        <mat-card-footer>
+            <bc-book-authors [book]="book"></bc-book-authors>
+        </mat-card-footer>
+    </mat-card> -->
+</mat-list>

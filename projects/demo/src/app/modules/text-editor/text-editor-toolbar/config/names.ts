@@ -28,6 +28,7 @@ export const TEXT_EDITOR_TOOLBAR = {
             BUTTON_NAME: 'format_color_text',
             TITLE: 'change color text',
             ARIA_LABEL: 'change color text',
+            VALUE: '#ffb31a',
         },
         ALIGN_CENTER: {
             BUTTON_NAME: 'format_align_center',

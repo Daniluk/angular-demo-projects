@@ -1,4 +1,4 @@
-<app-advertisement></app-advertisement>
+<app-advertisement *ngIf='advertisement'></app-advertisement>
 <mat-toolbar fxLayout="row">
     <mat-toolbar-row>
         <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
@@ -7,7 +7,7 @@
         <app-header></app-header>
     </mat-toolbar-row>
 </mat-toolbar>
-<mat-sidenav-container class="example-container" style="height: 89vh;">
+<mat-sidenav-container class="example-container" style="height: 91vh;">
     <mat-sidenav #drawer mode="side" [opened]="!(isSmallScreen)" role="navigation" fxHide.gt-sm="false">
         <app-sidebar fxLayout="column" fxLayoutGap="0px"></app-sidebar>
     </mat-sidenav>

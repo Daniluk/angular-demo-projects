@@ -1,0 +1,39 @@
+<div fxFlex fxLayout="row" style="height: 100%;">
+    <ng-container style="max-width: 800px;" [ngTemplateOutlet]="menu"> </ng-container>
+    <ng-container>hjhj аааааааааааааааааааааааааааааааааааааааа </ng-container>
+</div>
+<!-- <mat-toolbar>
+    <span class="title">MENU</span>
+</mat-toolbar>
+<mat-list style="flex-direction: row; flex-wrap: wrap;" fxLayoutGap="25px" fxLayoutAlign="center">
+    <mat-card fxLayout="column" fxFlex="28" fxFlex.xs="100" fxFlex.sm="80" fxFlex.md="40" mat-list-item
+        *ngFor="let item of items" (click)="onClick(item)">
+        <mat-card-content>
+            <div [ngStyle]="{'background-image':'url('+item.values.media.thumbnailSmall.url+')'}"></div>
+            <img style="height: 5px; width: 100%;" src="{{item.values.media.thumbnailSmall.url}}"
+                onerror="this.style.display='none'" />
+        </mat-card-content>
+        <mat-card-title-group>
+            <mat-card-title>{{item.values.name}}</mat-card-title>
+        </mat-card-title-group>
+    </mat-card>
+</mat-list> -->
+
+<ng-template fxFlex fxLayout="column"  #menu >
+    <mat-list style="flex-direction: column; flex-wrap: wrap;" fxLayoutGap="25px" fxLayoutAlign="center">
+        <mat-toolbar>
+            <span class="title">MENU</span>
+        </mat-toolbar>
+        <mat-card fxLayout="column" fxFlex="28" fxFlex.xs="100" fxFlex.sm="80" fxFlex.md="40" mat-list-item
+            *ngFor="let item of items" (click)="onClick(item)">
+            <mat-card-content>
+                <div [ngStyle]="{'background-image':'url('+item.values.media.thumbnailSmall.url+')'}"></div>
+                <img style="height: 5px; width: 100%;" src="{{item.values.media.thumbnailSmall.url}}"
+                    onerror="this.style.display='none'" />
+            </mat-card-content>
+            <mat-card-title-group>
+                <mat-card-title>{{item.values.name}}</mat-card-title>
+            </mat-card-title-group>
+        </mat-card>
+    </mat-list>
+</ng-template>

@@ -5,11 +5,15 @@
 
   div {
     border: 0px solid;
+    overflow: hidden;
   }
 
   button {
-    margin: .521rem .21rem;
+    margin: 0.521rem 0.21rem;
     background-color: chocolate;
   }
-
+  
+  textarea {
+    height: 300px;
+  }
 }

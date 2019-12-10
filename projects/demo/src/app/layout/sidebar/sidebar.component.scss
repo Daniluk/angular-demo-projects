@@ -1,7 +1,9 @@
 :host {
-
+    /*background-color: var(--primary-color);
+     color: var(--text-color); */
     .mat-nav-list {
         margin: .5rem 0;
+       /*  font: bold 0.9rem ProximaNova; */
     }
 
     .mat-nav-list a {
@@ -11,7 +13,7 @@
     .user-name {
         display: flex;
         flex-direction: column;
-        font: bold 0.9rem ProximaNova-Bold;
+        
     }
 
     .sidenav_container {

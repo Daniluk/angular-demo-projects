@@ -13,6 +13,7 @@ import { TextEditorSynonymsDirective } from './text-editor-synonyms/text-editor-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoMaterialModule } from '../../../../../shared-modules/material-module';
 import { HttpClientModule } from '@angular/common/http';
+import { TextEditorTextareaTempDirective } from './text-editor-textarea/text-editor-textarea-temp.directive';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     TextEditorTextareaComponent,
     TextEditorTextareaDirective,
     TextEditorSynonymsComponent,
-    TextEditorSynonymsDirective],
+    TextEditorSynonymsDirective,
+    TextEditorTextareaTempDirective],
   imports: [
     CommonModule,
     TextEditorRoutingModule,

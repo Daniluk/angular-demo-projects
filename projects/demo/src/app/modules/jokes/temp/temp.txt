@@ -1,0 +1,3 @@
+https://itnext.io/ngrx-best-practices-for-enterprise-angular-applications-6f00bcdf36d7
+
+https://stackblitz.com/github/ngHighCountry/angular-ngrx-chuck-norris

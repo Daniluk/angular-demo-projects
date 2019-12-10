@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { TextEditorService } from '../text-editor.service';
 import TEXTS from './data/texts.json';
 
@@ -7,11 +7,16 @@ import TEXTS from './data/texts.json';
   templateUrl: './text-editor-textarea.component.html',
   styleUrls: ['./text-editor-textarea.component.scss'],
 })
-export class TextEditorTextareaComponent implements OnInit {
+export class TextEditorTextareaComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('textarea', { static: true }) el: ElementRef;
+  @ViewChild('someInput', { static: true }) someInput: ElementRef;
 
   textValue: string = TEXTS.items[1].text;
-  @Input()
   synonyms: string[];
+
+  fontSize: number;
+  font: string;
 
   constructor(
     private serviceTextEditor: TextEditorService,
@@ -20,9 +25,22 @@ export class TextEditorTextareaComponent implements OnInit {
       const items = data as string[];
       this.synonyms = items;
     });
+    this.serviceTextEditor.setFontSize$.subscribe((data) => {
+      this.fontSize = data as number;
+      console.log(data);
+    });
+
+    this.serviceTextEditor.setFont$.subscribe((data) => {
+      this.font = data as string;
+      console.log(data);
+    });
   }
 
   ngOnInit() {
+
+  }
+
+  ngAfterViewInit() {
 
   }
 

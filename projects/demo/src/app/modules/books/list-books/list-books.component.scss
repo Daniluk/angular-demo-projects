@@ -1,0 +1,49 @@
+:host {
+  .title {
+    font-size: 1.125rem;
+    font-family: CabinPdf;
+    color: #a9a9a9;
+  }
+
+  .mat-card-title {
+    font-size: 1.125rem;
+    font-family: CabinPdf;
+    color: #a9a9a9;
+    /* width: 90%; */
+  }
+
+  .mat-card {
+    margin: .51rem;
+    cursor: pointer;
+    min-width: 150px;
+    max-width: 400px;
+    width: 400px;
+    min-height: 270px;
+    align-content: baseline;
+  }
+
+  .mat-drawer-container {
+    height: -webkit-fill-available;
+  }
+
+  div.mat-card-header-text {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    max-width: 20%;
+    margin: 0 1rem 1rem;
+  }
+
+  .circle {
+    float: left;
+    shape-outside: circle(50%);
+    width: 400px;
+    height: 400px;
+  }
+
+  .mat-card-title-group{
+    align-items: flex-start;
+  }
+}

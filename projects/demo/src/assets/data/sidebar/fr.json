@@ -1,0 +1,34 @@
+{
+    "items": [
+        {
+            "id": "text-editor",
+            "text": "éditeur de texte",
+            "routerLink": "text-editor"
+        },
+        {
+            "id": "stock",
+            "text": "magasin",
+            "routerLink": "stock"
+        },
+        {
+            "id": "books",
+            "text": "Livres",
+            "routerLink": "books"
+        },
+        {
+            "id": "movies",
+            "text": "films",
+            "routerLink": "movies"
+        },
+        {
+            "id": "courses",
+            "text": "cours",
+            "routerLink": "courses"
+        },
+        {
+            "id": "jokes",
+            "text": "jokes",
+            "routerLink": "jokes"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+<div fxFlex fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" style="height: 100%;">
+    <mat-list fxLayout="row wrap" fxLayoutAlign="space-between" *ngIf='items'>
+        <mat-card fxLayout="row" fxLayoutGap="1rem" *ngFor="let item of items">
+            <mat-card-header fxLayout="column">
+                <img mat-card-image *ngIf='item.media' src="{{item.media.imageMedium.url}}" />
+            </mat-card-header>
+            <mat-card-content fxLayout="column" fxLayoutAlign="">
+                <p class="name">{{item.name}}</p>
+                <p class="cost">{{item.cost}}</p>
+            </mat-card-content>
+            <mat-card-actions class="push" fxLayout="column" fxLayoutAlign="right">
+                <!-- <button mat-raised-button type="button">View item</button>
+                <button mat-raised-button type="submit">Order now</button> -->
+                <button class="btn-u btn-u-xs btn-brd btn-brd-hover" type="button" title="Add New" data-toggle="modal"
+                    data-target="#responsive" onclick="">
+                    <i class="fa fa-plus"></i>
+                    <span class="hidden-xs hidden-sm">Add New</span>
+                </button>
+                <button class="btn btn-block btn-facebook" type="button"><span>facebook</span></button>
+                <button type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+                </button>
+                <button type="button" class="btn btn-default" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-align-left" aria-hidden="true">fgfgf</span>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-list>
+    <app-sidebar></app-sidebar>
+</div>

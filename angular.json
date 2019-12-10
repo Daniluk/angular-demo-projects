@@ -37,6 +37,7 @@
               }
             ],
             "styles": [
+              "./node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -255,6 +256,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-demo-projects"
+    }
+  },
+  "defaultProject": "angular-demo-projects",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
