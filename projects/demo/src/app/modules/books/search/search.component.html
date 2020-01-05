@@ -2,7 +2,7 @@
     <mat-card-title>Find a Book</mat-card-title>
     <mat-card-content>
         <mat-form-field>
-            <input matInput placeholder="Search for a book" [value]="query" appSearch>
+            <input type="text" [matAutocomplete]="auto" matInput placeholder="Search for a book" [value]="query" appSearch>
         </mat-form-field>
         <mat-spinner [class.show]="searching" [diameter]="30" [strokeWidth]="3"></mat-spinner>
     </mat-card-content>
